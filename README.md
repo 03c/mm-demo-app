@@ -14,4 +14,4 @@ This will return a simple template.
 
 `/slow/:seconds`
 
-This will cause the app to sleep for x nmumber of seconds.
+This will cause the app to sleep for x number of seconds.
