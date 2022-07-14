@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   root "hello#index"
 
   get "/hello", to: "hello#index"
+  get "/slow/:seconds", to: "hello#slow"
 end
