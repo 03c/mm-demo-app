@@ -1,24 +1,17 @@
-# README
+# mm-demo-app
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Purpose
 
-Things you may want to cover:
+Validate the performance in Azure compared with the main MM Rails application.
 
-* Ruby version
+## Usage
 
-* System dependencies
+The app has two routes:
 
-* Configuration
+`/` or `/hello`
 
-* Database creation
+This will return a simple template.
 
-* Database initialization
+`/slow/:seconds`
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+This will cause the app to sleep for x nmumber of seconds.
