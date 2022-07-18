@@ -22,6 +22,8 @@ This will cause the app to sleep for x number of seconds.
 
 `docker compose up`
 
+To rebuild the Docker container use `--build`
+
 ### Run command inside the container
 
 `docker compose run --no-deps COMMAND`
