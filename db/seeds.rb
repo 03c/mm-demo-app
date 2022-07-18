@@ -6,11 +6,13 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
+# seed products if the db is new / has zero products
+if Product.count.zero?
+  puts "Seeding products..."
 
-puts "Seeding products..."
+  100.times do |i|
+    Product.create(name: "Product #{i}", description: "Demo description for Product #{i}", price: rand(1..100))
+  end
 
-100.times do |i|
-  Product.create(name: "Product #{i}", description: "Demo description for Product #{i}", price: rand(1..100))
+  puts "Finished seeding products."
 end
-
-puts "Finished seeding products."
