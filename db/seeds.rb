@@ -7,11 +7,17 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 # seed products if the db is new / has zero products
+
+require 'uri'
+
 if Product.count.zero?
   puts "Seeding products..."
 
   100.times do |i|
-    Product.create(name: "Product #{i}", description: "Demo description for Product #{i}", price: rand(1..100))
+    new_product = Product.create(name: "Product #{i}", description: "Demo description for Product #{i}", price: rand(1..100))
+
+    file = URI.open('https://picsum.photos/600/400')
+    new_product.image.attach(io: file, filename: "product-#{i}.pdf")  
   end
 
   puts "Finished seeding products."
