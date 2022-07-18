@@ -17,7 +17,7 @@ if Product.count.zero?
     new_product = Product.create(name: "Product #{i}", description: "Demo description for Product #{i}", price: rand(1..100))
 
     file = URI.open('https://picsum.photos/600/400')
-    new_product.image.attach(io: file, filename: "product-#{i}.pdf")  
+    new_product.image.attach(io: file, filename: "product-#{i}.jpg", content_type: 'image/jpeg')
   end
 
   puts "Finished seeding products."
