@@ -13,4 +13,10 @@
     <strong>Price:</strong>
     <%= product.price %>
   </p>
+
+  <p>
+    <strong>Image:</strong>
+    <%= image_tag product.image if product.image.attached? %>
+  </p>
+
 </div>
